@@ -1,6 +1,6 @@
 # SkyLog ✈
 
-A full-stack personal flight tracker featuring an interactive 3D globe visualization of past flights and a reporting feature that aggregates flights by airline, route, and date. Built for CS348 Information Systems.
+A full-stack flight tracker featuring an interactive 3D globe visualization of past flights and a reporting feature that aggregates flights by airline, route, and date. Built for CS348 Information Systems.
 
 <img width="1458" height="720" alt="SkyLog Front Page" src="https://github.com/user-attachments/assets/9fb7708b-25ae-40fe-b71c-11d8c9d8f3da" />
 
