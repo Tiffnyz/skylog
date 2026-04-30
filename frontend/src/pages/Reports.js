@@ -2,7 +2,7 @@ import { useState } from "react";
 import FilterBar from "../components/FilterBar";
 import StatsPanel from "../components/StatsPanel";
 
-const API = "http://127.0.0.1:5000";
+const API = process.env.REACT_APP_API_URL || "";
 
 export default function Reports() {
   const [flights, setFlights] = useState([]);

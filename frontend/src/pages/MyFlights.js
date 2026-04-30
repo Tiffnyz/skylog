@@ -3,7 +3,7 @@ import AddFlightModal from "../components/AddFlightModal";
 import FlightGlobe from "../components/FlightGlobe";
 import ReportModal from "../components/ReportModal";
 
-const API = "http://127.0.0.1:5000";
+const API = process.env.REACT_APP_API_URL || "";
 
 export default function MyFlights() {
   const [flights, setFlights] = useState([]);

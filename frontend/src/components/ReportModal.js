@@ -2,7 +2,7 @@ import { useState } from "react";
 import FilterBar from "./FilterBar";
 import StatsPanel from "./StatsPanel";
 
-const API = "http://127.0.0.1:5000";
+const API = process.env.REACT_APP_API_URL || "";
 
 export default function ReportModal({ onClose }) {
   const [flights, setFlights] = useState([]);

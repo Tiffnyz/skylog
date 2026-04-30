@@ -15,7 +15,10 @@ load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 app = Flask(__name__)
 CORS(app)
 
-engine = create_engine("postgresql://localhost/cs348")
+_db_url = os.getenv("DATABASE_URL", "postgresql://localhost/cs348")
+if _db_url.startswith("postgres://"):
+    _db_url = _db_url.replace("postgres://", "postgresql://", 1)
+engine = create_engine(_db_url)
 
 FR24_API_TOKEN = os.getenv("FR24_API_TOKEN")
 FR24_BASE_URL = "https://fr24api.flightradar24.com"
