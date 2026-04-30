@@ -1,0 +1,2 @@
+# skylog
+A full-stack flight tracking web app featuring an interactive 3D globe visualization of past flights and a reporting feature that aggregates flights by airline, route, and date to surface stats like total flight time, total miles, and on-time rate. Solo project built for CS348 Information Systems.
