@@ -64,7 +64,8 @@ def search_flights():
             return jsonify(error="FR24 API authentication failed"), 401
         if resp.status_code == 404:
             return jsonify(flights=[])
-        resp.raise_for_status()
+        if not resp.ok:
+            return jsonify(error=f"FR24 error {resp.status_code}: {resp.text}"), 502
 
         data = resp.json()
         raw_flights = data.get("data", [])
